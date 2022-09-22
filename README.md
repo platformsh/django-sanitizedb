@@ -55,4 +55,3 @@
 1. Open a pull request to activate
 1. View the now sanitized data
 1. Merge
-1. M
