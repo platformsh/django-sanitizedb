@@ -47,6 +47,7 @@
 1. `platform ssh`
 1. `echo $PLATFORM_RELATIONSHIPS`
 1. `echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq`
+1. `DB_USER=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq -r '.database[0].username')`
 1. Exit the session
 1. `cp steps/sanitize.sh .`
 1. `chmod +x sanitize.sh`
