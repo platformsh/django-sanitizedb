@@ -1,0 +1,17 @@
+{% for sighting in sightings %}
+<tr>
+    <td>
+        <a class="text-white" href="{% url 'app_sighting_show' sighting.id %}">
+            {{ sighting.title }}
+        </a>
+    </td>
+    <td class="text-nowrap">
+        <time class="table-content"
+            datetime="{{ sighting.date_added|date:'Y-m-d H:i' }}">{{ sighting.date_added|timesince }}</time>
+    </td>
+    <td>
+        <a class="text-white table-content text-center"
+            href="{% url 'app_sighting_show' sighting.id %}">{{ sighting.comment_set.all|length }}</a>
+    </td>
+</tr>
+{% endfor %}
